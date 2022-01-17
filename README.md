@@ -2,6 +2,23 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# or create a new repository on the command line
+echo "# react-curd-app" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/pankaj1404/react-curd-app.git
+git push -u origin main
+
+# or push an existing repository from the command line
+git remote add origin https://github.com/pankaj1404/react-curd-app.git
+git branch -M main
+git push -u origin main
+
+# or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
 # Adding a project to GitHub with GitHub CLI
     GitHub CLI is an open source tool for using GitHub from your computer's command line. GitHub CLI can simplify the process of adding an existing project to GitHub using the command line. To learn more about GitHub CLI, see "About GitHub CLI."
 

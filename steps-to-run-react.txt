@@ -1,0 +1,6 @@
+steps to use React-create-app
+
+npx create-react-app my-first-react-app  or for current folder  you need to enter cmd as " npm create-react-app .(dot)"
+cd my-first-react-app
+npm start 
+

@@ -2,7 +2,28 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# or create a new repository on the command line
+
+echo "# react-curd-app" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/pankaj1404/react-curd-app.git
+git push -u origin main
+
+# or push an existing repository from the command line
+
+git remote add origin https://github.com/pankaj1404/react-curd-app.git
+git branch -M main
+git push -u origin main
+
+# or import code from another repository
+
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
 # Adding a project to GitHub with GitHub CLI
+
     GitHub CLI is an open source tool for using GitHub from your computer's command line. GitHub CLI can simplify the process of adding an existing project to GitHub using the command line. To learn more about GitHub CLI, see "About GitHub CLI."
 
 1. In the command line, navigate to the root directory of your project.
@@ -16,11 +37,24 @@ git add . && git commit -m "initial commit"
 
 4. To create a repository for your project on GitHub, use the gh repo create subcommand. When prompted, select Push an existing local repository to GitHub and enter the desired name for your repository. If you want your project to belong to an organization instead of your user account, specify the organization name and project name with organization-name/project-name.
 
+download from https://cli.github.com/
+
+    Examples
+    # create a repository interactively
+    gh repo create
+
+    # create a new remote repository and clone it locally
+    gh repo create my-project --public --clone
+
+    # create a remote repository from the current directory
+    gh repo create my-project --private --source=. --remote=upstream
+
 5. Follow the interactive prompts. To add the remote and push the repository, confirm yes when asked to add the remote and push the commits to the current branch.
 
 6. Alternatively, to skip all the prompts, supply the path to the repository with the --source flag and pass a visibility flag (--public, --private, or --internal). For example, gh repo create --source=. --public. Specify a remote with the --remote flag. To push your commits, pass the --push flag. For more information about possible arguments, see the GitHub CLI manual.
 
 # Adding a project to GitHub without GitHub CLI
+
 1. Create a new repository on GitHub.com. To avoid errors, do not initialize the new repository with README, license, or gitignore files. You can add these files after your project has been pushed to GitHub.
 
 Create New Repository drop-down
@@ -30,21 +64,21 @@ Create New Repository drop-down
 4. Initialize the local directory as a Git repository.
    $ git init -b main
 5. Add the files in your new local repository. This stages them for the first commit.
-    $ git add .
-    # Adds the files in the local repository and stages them for commit. To unstage a file, use 'git reset HEAD YOUR-FILE'.
+   $ git add .
+   # Adds the files in the local repository and stages them for commit. To unstage a file, use 'git reset HEAD YOUR-FILE'.
 6. Commit the files that you've staged in your local repository.
-    $ git commit -m "First commit"
-    # Commits the tracked changes and prepares them to be pushed to a remote repository. To remove this commit and modify the file, use 'git reset --soft HEAD~1' and commit and add the file again.
-7. At the top of your repository on GitHub.com's Quick Setup page, click  to copy the remote repository URL.
-Copy remote repository URL field
+   $ git commit -m "First commit"
+   # Commits the tracked changes and prepares them to be pushed to a remote repository. To remove this commit and modify the file, use 'git reset --soft HEAD~1' and commit and add the file again.
+7. At the top of your repository on GitHub.com's Quick Setup page, click to copy the remote repository URL.
+   Copy remote repository URL field
 8. In the Command prompt, add the URL for the remote repository where your local repository will be pushed.
-    $ git remote add origin  <REMOTE_URL> 
-    # Sets the new remote
-    $ git remote -v
-    # Verifies the new remote URL
+   $ git remote add origin <REMOTE_URL>
+   # Sets the new remote
+   $ git remote -v
+   # Verifies the new remote URL
 9. Push the changes in your local repository to GitHub.com.
-    $ git push origin main
-    # Pushes the changes in your local repository up to the remote repository you specified
+   $ git push origin main
+   # Pushes the changes in your local repository up to the remote repository you specified
 
 ## Available Scripts
 
@@ -112,3 +146,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+github max : https://github.com/academind

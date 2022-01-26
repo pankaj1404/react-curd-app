@@ -55,10 +55,9 @@ const ExpenseForm = (props) => {
   const submitHandler = (event) => {
     // will not reload or execute  default behaviour of browser , to stop we are using below preventdefault method
     event.preventDefault();
-
     const expenseData = {
       title: title,
-      amount: amount,
+      amount: +amount,
       date: new Date(date),
     };
     // console.log(expenseData);
@@ -71,6 +70,7 @@ const ExpenseForm = (props) => {
     setAmount('');
     setDate('');
   };
+
   return (
     <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
@@ -80,6 +80,7 @@ const ExpenseForm = (props) => {
             type="text"
             value={title}
             onChange={titleChangeHandler}
+            required
           />
         </div>
         <div className="new-expense__control label">
@@ -90,6 +91,7 @@ const ExpenseForm = (props) => {
             step="0.01"
             value={amount}
             onChange={amountChangeHandler}
+            required
           />
         </div>
         <div className="new-expense__control label">
@@ -100,10 +102,14 @@ const ExpenseForm = (props) => {
             max="2022-12-31"
             value={date}
             onChange={dateChangeHandler}
+            required
           />
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="cancel" onClick={props.onCancel}>
+          Cancel
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
